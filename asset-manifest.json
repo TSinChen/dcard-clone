@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/dcard-clone/static/css/main.022c90cc.chunk.css",
+    "main.js": "/dcard-clone/static/js/main.14a77c9f.chunk.js",
+    "main.js.map": "/dcard-clone/static/js/main.14a77c9f.chunk.js.map",
+    "runtime-main.js": "/dcard-clone/static/js/runtime-main.c1355a52.js",
+    "runtime-main.js.map": "/dcard-clone/static/js/runtime-main.c1355a52.js.map",
+    "static/css/2.72ce1e94.chunk.css": "/dcard-clone/static/css/2.72ce1e94.chunk.css",
+    "static/js/2.0fca759b.chunk.js": "/dcard-clone/static/js/2.0fca759b.chunk.js",
+    "static/js/2.0fca759b.chunk.js.map": "/dcard-clone/static/js/2.0fca759b.chunk.js.map",
+    "index.html": "/dcard-clone/index.html",
+    "static/css/2.72ce1e94.chunk.css.map": "/dcard-clone/static/css/2.72ce1e94.chunk.css.map",
+    "static/css/main.022c90cc.chunk.css.map": "/dcard-clone/static/css/main.022c90cc.chunk.css.map",
+    "static/js/2.0fca759b.chunk.js.LICENSE.txt": "/dcard-clone/static/js/2.0fca759b.chunk.js.LICENSE.txt",
+    "static/media/logo.b0a1bbe8.svg": "/dcard-clone/static/media/logo.b0a1bbe8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c1355a52.js",
+    "static/css/2.72ce1e94.chunk.css",
+    "static/js/2.0fca759b.chunk.js",
+    "static/css/main.022c90cc.chunk.css",
+    "static/js/main.14a77c9f.chunk.js"
+  ]
+}
