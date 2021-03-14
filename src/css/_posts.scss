@@ -1,0 +1,66 @@
+.posts {
+	padding: 0 60px;
+	color: rgba(0, 0, 0, 0.75);
+
+	.post {
+		padding: 20px 0;
+		border-bottom: 1px solid rgb(233, 233, 233);
+		cursor: pointer;
+	}
+
+	.post-top {
+		display: flex;
+		margin-bottom: 15px;
+		color: rgba(0, 0, 0, 0.5);
+		font-size: 14px;
+
+		.txt {
+			display: flex;
+			margin-right: 10px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+
+	.post-avatar {
+		width: 16px;
+		height: 16px;
+		margin-right: 8px;
+		color: #fff;
+		line-height: 16px;
+		text-align: center;
+		border-radius: 50%;
+		user-select: none;
+
+		&.male {
+			background-color: rgb(0, 110, 165);
+		}
+
+		&.female {
+			background-color: rgb(203, 58, 107);
+		}
+	}
+
+	.post-mid {
+		.txt {
+			margin-right: 20px;
+			width: 504px;
+		}
+	}
+
+	.post-title {
+		margin-bottom: 8px;
+		color: #000;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 25px;
+	}
+
+	.post-excerpt {
+		font-size: 14px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+}

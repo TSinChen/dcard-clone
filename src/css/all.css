@@ -1,0 +1,282 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  word-break: break-all;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #00324e;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.body-container {
+  display: flex;
+  max-width: 1280px;
+  margin: auto;
+  padding-top: 72px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  width: 100%;
+  height: 48px;
+  background-color: #006aa6;
+}
+.header .header-container {
+  display: flex;
+  max-width: 1280px;
+  height: 100%;
+  margin: auto;
+  padding: 0 36px;
+  align-items: center;
+}
+.header .logo {
+  height: 100%;
+  padding: 10px 0;
+}
+.header .logo img {
+  height: 100%;
+}
+.header .search-bar {
+  display: flex;
+  width: 40%;
+  min-width: 200px;
+  height: 30px;
+  margin: 0 32px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.header .search-bar input {
+  background-color: #00588a;
+  width: 100%;
+  height: 100%;
+  padding: 0px 8px;
+  color: white;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+.header .search-bar input::placeholder {
+  color: #bfd5e2;
+}
+.header .search-bar button {
+  background-color: #006aa6;
+  display: flex;
+  padding: 0 9px;
+  color: #fff;
+  border: 1px solid #00588a;
+  outline: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar {
+  position: sticky;
+  top: 72px;
+  width: 208px;
+  height: calc(100vh - 88px);
+  -webkit-user-select: none;
+          user-select: none;
+  overflow: hidden;
+}
+.navbar .scroll {
+  height: calc(100vh - 260px);
+}
+.navbar .scroll .simplebar-track {
+  cursor: pointer;
+}
+.navbar .scroll .simplebar-vertical {
+  pointer-events: unset;
+}
+.navbar .nav-block > p {
+  display: flex;
+  height: 44px;
+  padding: 0px 10px 0px 20px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 14px;
+  align-items: center;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.navbar .nav-item {
+  display: flex;
+  height: 44px;
+  padding: 0 10px 0 20px;
+  color: rgba(255, 255, 255, 0.75);
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar .nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.navbar .nav-item .forum-icon {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .nav-item .forum-name {
+  margin: 0 10px 0 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.main {
+  background-color: #fff;
+  display: flex;
+  min-height: calc(100vh - 68px);
+  height: 100%;
+  width: 728px;
+  margin: 0 12px;
+  color: #000;
+  border-radius: 4px 4px 0 0;
+  flex-direction: column;
+}
+.main .mainHeader {
+  position: sticky;
+  top: 48px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.main .content .banner {
+  width: 100%;
+}
+
+.homeNavbar {
+  background-color: #fff;
+  display: flex;
+  padding: 20px 60px 0;
+}
+.homeNavbar .nav-item {
+  position: relative;
+  height: 60px;
+  padding: 0 16px;
+  color: rgba(0, 0, 0, 0.35);
+  line-height: 60px;
+  text-decoration: none;
+}
+.homeNavbar .nav-item.active, .homeNavbar .nav-item:hover {
+  color: #000;
+}
+.homeNavbar .nav-item.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  border-bottom: 2px solid #3397cf;
+}
+
+.posts {
+  padding: 0 60px;
+  color: rgba(0, 0, 0, 0.75);
+}
+.posts .post {
+  padding: 20px 0;
+  border-bottom: 1px solid #e9e9e9;
+  cursor: pointer;
+}
+.posts .post-top {
+  display: flex;
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+.posts .post-top .txt {
+  display: flex;
+  margin-right: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.posts .post-avatar {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #fff;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.posts .post-avatar.male {
+  background-color: #006ea5;
+}
+.posts .post-avatar.female {
+  background-color: #cb3a6b;
+}
+.posts .post-mid .txt {
+  margin-right: 20px;
+  width: 504px;
+}
+.posts .post-title {
+  margin-bottom: 8px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.posts .post-excerpt {
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

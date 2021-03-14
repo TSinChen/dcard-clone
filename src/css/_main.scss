@@ -1,0 +1,23 @@
+.main {
+	background-color: #fff;
+	display: flex;
+	min-height: calc(100vh - 68px);
+	height: 100%;
+	width: 728px;
+	margin: 0 12px;
+	color: #000;
+	border-radius: 4px 4px 0 0;
+	flex-direction: column;
+
+	.mainHeader {
+		position: sticky;
+		top: 48px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	}
+
+	.content {
+		.banner {
+			width: 100%;
+		}
+	}
+}

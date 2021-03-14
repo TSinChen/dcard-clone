@@ -1,0 +1,63 @@
+.navbar {
+	position: sticky;
+	top: 72px;
+	width: 208px;
+	height: calc(100vh - 88px);
+	user-select: none;
+	overflow: hidden;
+
+	.scroll {
+		height: calc(100vh - 260px);
+
+		.simplebar-track {
+			cursor: pointer;
+		}
+
+		.simplebar-vertical {
+			pointer-events: unset;
+		}
+	}
+
+	.nav-block {
+		> p {
+			display: flex;
+			height: 44px;
+			padding: 0px 10px 0px 20px;
+			color: rgba(255, 255, 255, 0.35);
+			font-size: 14px;
+			align-items: center;
+			user-select: none;
+		}
+	}
+
+	.nav-item {
+		display: flex;
+		height: 44px;
+		padding: 0 10px 0 20px;
+		color: rgba(255, 255, 255, 0.75);
+		align-items: center;
+		text-decoration: none;
+		cursor: pointer;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.2);
+		}
+
+		.forum-icon {
+			display: flex;
+			width: 30px;
+			height: 30px;
+			font-size: 20px;
+			border-radius: 50%;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.forum-name {
+			margin: 0 10px 0 8px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+}

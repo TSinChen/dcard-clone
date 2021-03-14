@@ -1,0 +1,28 @@
+.homeNavbar {
+	background-color: #fff;
+	display: flex;
+	padding: 20px 60px 0;
+
+	.nav-item {
+		position: relative;
+		height: 60px;
+		padding: 0 16px;
+		color: rgba(0, 0, 0, 0.35);
+		line-height: 60px;
+		text-decoration: none;
+
+		&.active,
+		&:hover {
+			color: #000;
+		}
+
+		&.active::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -1px;
+			width: 100%;
+			border-bottom: 2px solid rgb(51, 151, 207);
+		}
+	}
+}
