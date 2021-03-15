@@ -55,3 +55,36 @@ const setHotPosts = (hotPosts) => ({
 	type: constants.SET_HOT_POSTS,
 	hotPosts,
 });
+
+export const fetchCurrentForum = (currentForumAlias) => {
+	return async (dispatch) => {
+		const res = await axios.get('/apis/forums.json');
+
+		const currentForum = res.data.filter((forum) => {
+			if (forum.alias === currentForumAlias) {
+				return forum;
+			}
+		})[0];
+		dispatch(setCurrentForum(currentForum));
+	};
+};
+
+export const setCurrentForum = (currentForum) => ({
+	type: constants.SET_CURRENT_FORUM,
+	currentForum,
+});
+
+export const fetchForumPosts = () => {
+	return async (dispatch) => {
+		const res = await axios.get('/apis/posts.json');
+
+		const posts = res.data;
+
+		dispatch(setForumPosts(posts));
+	};
+};
+
+const setForumPosts = (forumPosts) => ({
+	type: constants.SET_FORUM_POSTS,
+	forumPosts,
+});

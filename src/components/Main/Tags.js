@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-class HomeNavbar extends React.Component {
+class Tags extends React.Component {
 	render() {
 		return (
-			<div className="homeNavbar">
+			<div className="tags">
 				{this.props.tags.map((tag) => {
 					return (
 						<a
-							className={`nav-item${
+							className={`tags-item${
 								this.props.currentTag === tag ? ' active' : ''
 							}`}
 							key={tag}
@@ -29,4 +29,4 @@ const mapState = (state) => {
 	};
 };
 
-export default connect(mapState, null)(HomeNavbar);
+export default connect(mapState, null)(Tags);

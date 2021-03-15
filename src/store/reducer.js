@@ -7,6 +7,8 @@ const defaultState = {
 		home: '熱門',
 	},
 	hotPosts: [],
+	forumPosts: [],
+	currentForum: {},
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -26,6 +28,16 @@ export default (state = defaultState, action) => {
 			return {
 				...state,
 				hotPosts: action.hotPosts,
+			};
+		case constants.SET_FORUM_POSTS:
+			return {
+				...state,
+				forumPosts: action.forumPosts,
+			};
+		case constants.SET_CURRENT_FORUM:
+			return {
+				...state,
+				currentForum: action.currentForum,
 			};
 		default:
 			return state;

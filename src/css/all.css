@@ -58,6 +58,7 @@ table {
 body {
   background-color: #00324e;
   color: rgba(255, 255, 255, 0.75);
+  font-family: Roboto;
 }
 
 .body-container {
@@ -163,6 +164,9 @@ body {
 .navbar .nav-item:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
+.navbar .nav-item.active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
 .navbar .nav-item .forum-icon {
   display: flex;
   width: 30px;
@@ -191,20 +195,25 @@ body {
   flex-direction: column;
 }
 .main .mainHeader {
+  background-color: #fff;
   position: sticky;
   top: 48px;
+  width: 100%;
+  padding: 20px 60px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px 4px 0 0;
+  z-index: 10;
 }
 .main .content .banner {
   width: 100%;
 }
 
-.homeNavbar {
+.tags {
   background-color: #fff;
   display: flex;
-  padding: 20px 60px 0;
+  border-radius: 4px 4px 0 0;
 }
-.homeNavbar .nav-item {
+.tags .tags-item {
   position: relative;
   height: 60px;
   padding: 0 16px;
@@ -212,10 +221,10 @@ body {
   line-height: 60px;
   text-decoration: none;
 }
-.homeNavbar .nav-item.active, .homeNavbar .nav-item:hover {
+.tags .tags-item.active, .tags .tags-item:hover {
   color: #000;
 }
-.homeNavbar .nav-item.active::after {
+.tags .tags-item.active::after {
   content: "";
   position: absolute;
   left: 0;
@@ -251,6 +260,7 @@ body {
   height: 16px;
   margin-right: 8px;
   color: #fff;
+  font-size: 13px;
   line-height: 16px;
   text-align: center;
   border-radius: 50%;
@@ -263,9 +273,16 @@ body {
 .posts .post-avatar.female {
   background-color: #cb3a6b;
 }
-.posts .post-mid .txt {
+.posts .post-mid {
+  position: relative;
+}
+.posts .post-txt {
   margin-right: 20px;
+  margin-bottom: 15px;
   width: 504px;
+}
+.posts .post-txt.noThumbnail {
+  width: 100%;
 }
 .posts .post-title {
   margin-bottom: 8px;
@@ -279,4 +296,106 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+.posts .post-thumbnail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 84px;
+  height: 84px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.posts .post-bot {
+  display: flex;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  line-height: 20px;
+}
+.posts .post-emoji {
+  position: relative;
+}
+.posts .post-emoji > * {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+.posts .post-emoji .emoji-1 {
+  background-color: #faa;
+  left: 0;
+  z-index: 3;
+}
+.posts .post-emoji .emoji-2 {
+  background-color: #afa;
+  left: 15px;
+  z-index: 2;
+}
+.posts .post-emoji .emoji-3 {
+  background-color: #aaf;
+  left: 30px;
+  z-index: 1;
+}
+.posts .post-likeCount {
+  margin-left: 60px;
+  margin-right: 20px;
+}
+.posts .post-comment-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  fill: #3397cf;
+}
+.posts .post-collect-icon {
+  margin-left: 16px;
+  margin-right: 6px;
+  color: #e1e1e1;
+  font-size: 18px;
+}
+
+.jumbotron img {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.forumHeader {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+.forumHeader .left {
+  display: flex;
+  align-items: center;
+}
+.forumHeader .forum-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.forumHeader .forum-logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.forumHeader .forum-name {
+  font-size: 30px;
+  color: #000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.forumHeader .forum-follow {
+  background-color: #3397cf;
+  padding: 0 14px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 36px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }

@@ -1,19 +1,20 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import HomeNavbar from './HomeNavbar';
+import Tags from './Tags';
 import Posts from './Posts';
-import { fetchHotPosts } from '../../store/actionCreators';
+import { fetchHotPosts, setCurrentForum } from '../../store/actionCreators';
 
 class Home extends React.Component {
 	componentDidMount() {
 		this.props.fetchHotPosts();
+		this.props.setCurrentForum('home');
 	}
 
 	render() {
 		return (
 			<Fragment>
 				<div className="mainHeader">
-					<HomeNavbar tags={['熱門', '最新', '追蹤']} />
+					<Tags tags={['熱門', '最新', '追蹤']} />
 				</div>
 				<div className="content">
 					<img
@@ -34,4 +35,4 @@ const mapState = (state) => {
 	};
 };
 
-export default connect(mapState, { fetchHotPosts })(Home);
+export default connect(mapState, { fetchHotPosts, setCurrentForum })(Home);

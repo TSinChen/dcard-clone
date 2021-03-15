@@ -52,7 +52,11 @@ class Navbar extends React.Component {
 				{this.props.hotForums.map((forum) => {
 					return (
 						<Link
-							className="nav-item"
+							className={`nav-item${
+								forum.alias === this.props.currentForum.alias
+									? ' active'
+									: ''
+							}`}
 							key={forum.id}
 							to={`/${forum.alias}`}
 						>
@@ -76,7 +80,11 @@ class Navbar extends React.Component {
 				{this.props.featuredForums.map((forum) => {
 					return (
 						<Link
-							className="nav-item"
+							className={`nav-item${
+								forum.alias === this.props.currentForum.alias
+									? ' active'
+									: ''
+							}`}
 							key={forum.id}
 							to={`/${forum.alias}`}
 						>
@@ -114,6 +122,7 @@ const mapState = (state) => {
 	return {
 		hotForums: state.hotForums,
 		featuredForums: state.featuredForums,
+		currentForum: state.currentForum,
 	};
 };
 
