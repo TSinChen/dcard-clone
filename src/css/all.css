@@ -65,7 +65,7 @@ body {
   display: flex;
   max-width: 1280px;
   margin: auto;
-  padding-top: 72px;
+  padding-top: 68px;
 }
 
 .header {
@@ -126,7 +126,7 @@ body {
 
 .navbar {
   position: sticky;
-  top: 72px;
+  top: 68px;
   width: 208px;
   height: calc(100vh - 88px);
   -webkit-user-select: none;
@@ -171,6 +171,7 @@ body {
   display: flex;
   width: 30px;
   height: 30px;
+  color: #fff;
   font-size: 20px;
   border-radius: 50%;
   justify-content: center;
@@ -204,7 +205,7 @@ body {
   border-radius: 4px 4px 0 0;
   z-index: 10;
 }
-.main .content .banner {
+.main .ads .banner {
   width: 100%;
 }
 
@@ -398,4 +399,8 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.forumHeader .forum-follow:hover {
+  opacity: 0.9;
 }

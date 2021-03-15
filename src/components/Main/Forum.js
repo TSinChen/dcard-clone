@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import Tags from './Tags';
-import Posts from './Posts';
+import Tags from './Utility/Tags';
+import Ads from './Utility/Ads';
+import Posts from './Utility/Posts';
 import ForumHeader from './ForumHeader';
 import { fetchCurrentForum, fetchForumPosts } from '../../store/actionCreators';
 
@@ -36,13 +37,7 @@ class Forum extends React.Component {
 					<ForumHeader />
 					<Tags tags={['熱門', '最新', '板規']} />
 				</div>
-				<div className="content">
-					<img
-						className="banner"
-						src="https://megapx-assets.dcard.tw/images/95f12d4a-a244-4161-b68c-1fa9b07ce017/full.webp"
-						alt=""
-					/>
-				</div>
+				<Ads />
 				<Posts posts={this.props.posts} />
 			</Fragment>
 		);

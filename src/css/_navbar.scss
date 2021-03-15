@@ -1,6 +1,6 @@
 .navbar {
 	position: sticky;
-	top: 72px;
+	top: 68px;
 	width: 208px;
 	height: calc(100vh - 88px);
 	user-select: none;
@@ -51,6 +51,7 @@
 			display: flex;
 			width: 30px;
 			height: 30px;
+			color: #fff;
 			font-size: 20px;
 			border-radius: 50%;
 			justify-content: center;

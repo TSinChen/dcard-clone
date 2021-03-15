@@ -45,5 +45,10 @@
 		border: none;
 		border-radius: 8px;
 		cursor: pointer;
+		transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
+		&:hover {
+			opacity: 0.9;
+		}
 	}
 }
