@@ -1,0 +1,406 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  word-break: break-all;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #00324e;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: Roboto;
+}
+
+.body-container {
+  display: flex;
+  max-width: 1280px;
+  margin: auto;
+  padding-top: 68px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  width: 100%;
+  height: 48px;
+  background-color: #006aa6;
+}
+.header .header-container {
+  display: flex;
+  max-width: 1280px;
+  height: 100%;
+  margin: auto;
+  padding: 0 36px;
+  align-items: center;
+}
+.header .logo {
+  height: 100%;
+  padding: 10px 0;
+}
+.header .logo img {
+  height: 100%;
+}
+.header .search-bar {
+  display: flex;
+  width: 40%;
+  min-width: 200px;
+  height: 30px;
+  margin: 0 32px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.header .search-bar input {
+  background-color: #00588a;
+  width: 100%;
+  height: 100%;
+  padding: 0px 8px;
+  color: white;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+.header .search-bar input::placeholder {
+  color: #bfd5e2;
+}
+.header .search-bar button {
+  background-color: #006aa6;
+  display: flex;
+  padding: 0 9px;
+  color: #fff;
+  border: 1px solid #00588a;
+  outline: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar {
+  position: sticky;
+  top: 68px;
+  width: 208px;
+  height: calc(100vh - 88px);
+  -webkit-user-select: none;
+          user-select: none;
+  overflow: hidden;
+}
+.navbar .scroll {
+  height: calc(100vh - 260px);
+}
+.navbar .scroll .simplebar-track {
+  cursor: pointer;
+}
+.navbar .scroll .simplebar-vertical {
+  pointer-events: unset;
+}
+.navbar .nav-block > p {
+  display: flex;
+  height: 44px;
+  padding: 0px 10px 0px 20px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 14px;
+  align-items: center;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.navbar .nav-item {
+  display: flex;
+  height: 44px;
+  padding: 0 10px 0 20px;
+  color: rgba(255, 255, 255, 0.75);
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar .nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.navbar .nav-item.active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.navbar .nav-item .forum-icon {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .nav-item .forum-name {
+  margin: 0 10px 0 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.main {
+  background-color: #fff;
+  display: flex;
+  min-height: calc(100vh - 68px);
+  height: 100%;
+  width: 728px;
+  margin: 0 12px;
+  color: #000;
+  border-radius: 4px 4px 0 0;
+  flex-direction: column;
+}
+.main .mainHeader {
+  background-color: #fff;
+  position: sticky;
+  top: 48px;
+  width: 100%;
+  padding: 20px 60px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px 4px 0 0;
+  z-index: 10;
+}
+.main .ads .banner {
+  width: 100%;
+}
+
+.tags {
+  background-color: #fff;
+  display: flex;
+  border-radius: 4px 4px 0 0;
+}
+.tags .tags-item {
+  position: relative;
+  height: 60px;
+  padding: 0 16px;
+  color: rgba(0, 0, 0, 0.35);
+  line-height: 60px;
+  text-decoration: none;
+}
+.tags .tags-item.active, .tags .tags-item:hover {
+  color: #000;
+}
+.tags .tags-item.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  border-bottom: 2px solid #3397cf;
+}
+
+.posts {
+  padding: 0 60px;
+  color: rgba(0, 0, 0, 0.75);
+}
+.posts .post {
+  padding: 20px 0;
+  border-bottom: 1px solid #e9e9e9;
+  cursor: pointer;
+}
+.posts .post-top {
+  display: flex;
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+.posts .post-top .txt {
+  display: flex;
+  margin-right: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.posts .post-avatar {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.posts .post-avatar.male {
+  background-color: #006ea5;
+}
+.posts .post-avatar.female {
+  background-color: #cb3a6b;
+}
+.posts .post-mid {
+  position: relative;
+}
+.posts .post-txt {
+  margin-right: 20px;
+  margin-bottom: 15px;
+  width: 504px;
+}
+.posts .post-txt.noThumbnail {
+  width: 100%;
+}
+.posts .post-title {
+  margin-bottom: 8px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.posts .post-excerpt {
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.posts .post-thumbnail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 84px;
+  height: 84px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.posts .post-bot {
+  display: flex;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  line-height: 20px;
+}
+.posts .post-emoji {
+  position: relative;
+}
+.posts .post-emoji > * {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+.posts .post-emoji .emoji-1 {
+  background-color: #faa;
+  left: 0;
+  z-index: 3;
+}
+.posts .post-emoji .emoji-2 {
+  background-color: #afa;
+  left: 15px;
+  z-index: 2;
+}
+.posts .post-emoji .emoji-3 {
+  background-color: #aaf;
+  left: 30px;
+  z-index: 1;
+}
+.posts .post-likeCount {
+  margin-left: 60px;
+  margin-right: 20px;
+}
+.posts .post-comment-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  fill: #3397cf;
+}
+.posts .post-collect-icon {
+  margin-left: 16px;
+  margin-right: 6px;
+  color: #e1e1e1;
+  font-size: 18px;
+}
+
+.jumbotron img {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.forumHeader {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+.forumHeader .left {
+  display: flex;
+  align-items: center;
+}
+.forumHeader .forum-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.forumHeader .forum-logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.forumHeader .forum-name {
+  font-size: 30px;
+  color: #000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.forumHeader .forum-follow {
+  background-color: #3397cf;
+  padding: 0 14px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 36px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.forumHeader .forum-follow:hover {
+  opacity: 0.9;
+}

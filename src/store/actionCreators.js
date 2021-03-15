@@ -60,11 +60,10 @@ export const fetchCurrentForum = (currentForumAlias) => {
 	return async (dispatch) => {
 		const res = await axios.get('/apis/forums.json');
 
-		const currentForum = res.data.filter((forum) => {
-			if (forum.alias === currentForumAlias) {
-				return forum;
-			}
-		})[0];
+		const currentForum = res.data.find((forum) => {
+			return forum.alias === currentForumAlias;
+		});
+
 		dispatch(setCurrentForum(currentForum));
 	};
 };
