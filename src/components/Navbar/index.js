@@ -17,7 +17,7 @@ class Navbar extends React.Component {
 	renderNormal() {
 		return (
 			<div className="nav-block">
-				<Link className="nav-item" to="">
+				<Link className="nav-item" to="/forum/all">
 					<div className="forum-icon">
 						<i className="fas fa-list-alt"></i>
 					</div>

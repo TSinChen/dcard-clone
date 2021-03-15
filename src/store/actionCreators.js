@@ -45,9 +45,7 @@ export const fetchHotPosts = () => {
 	return async (dispatch) => {
 		const res = await axios.get('/apis/hotPosts.json');
 
-		const posts = res.data;
-
-		dispatch(setHotPosts(posts));
+		dispatch(setHotPosts(res.data));
 	};
 };
 
@@ -77,13 +75,37 @@ export const fetchForumPosts = () => {
 	return async (dispatch) => {
 		const res = await axios.get('/apis/posts.json');
 
-		const posts = res.data;
-
-		dispatch(setForumPosts(posts));
+		dispatch(setForumPosts(res.data));
 	};
 };
 
 const setForumPosts = (forumPosts) => ({
 	type: constants.SET_FORUM_POSTS,
 	forumPosts,
+});
+
+export const fetchCategories = () => {
+	return async (dispatch) => {
+		const res = await axios.get('/apis/forumsCategory.json');
+
+		dispatch(setCategories(res.data));
+	};
+};
+
+const setCategories = (categories) => ({
+	type: constants.SET_CATEGORIES,
+	categories,
+});
+
+export const fetchForums = () => {
+	return async (dispatch) => {
+		const res = await axios.get('/apis/forums.json');
+
+		dispatch(setForums(res.data));
+	};
+};
+
+const setForums = (forums) => ({
+	type: constants.SET_FORUMS,
+	forums,
 });

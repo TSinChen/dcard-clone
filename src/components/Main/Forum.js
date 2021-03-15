@@ -33,7 +33,7 @@ class Forum extends React.Component {
 						alt=""
 					/>
 				</div>
-				<div className="mainHeader" id="test">
+				<div className="mainHeader">
 					<ForumHeader />
 					<Tags tags={['熱門', '最新', '板規']} />
 				</div>

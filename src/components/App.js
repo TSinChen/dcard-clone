@@ -6,6 +6,7 @@ import Header from './Header';
 import Navbar from './Navbar';
 import HomePage from './Main/HomePage';
 import Forum from './Main/Forum';
+import AllForumsCategory from './Main/AllForumsCategory';
 
 class App extends React.Component {
 	render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
 					<div className="main">
 						<Route path="/" exact component={HomePage} />
 						<Route path="/:forum" exact component={Forum} />
+						<Route path="/forum/all" exact component={AllForumsCategory} />
 					</div>
 				</div>
 			</HashRouter>

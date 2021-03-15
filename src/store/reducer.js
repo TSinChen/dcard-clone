@@ -9,6 +9,8 @@ const defaultState = {
 	hotPosts: [],
 	forumPosts: [],
 	currentForum: {},
+	categories: [],
+	forums: [],
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -38,6 +40,16 @@ export default (state = defaultState, action) => {
 			return {
 				...state,
 				currentForum: action.currentForum,
+			};
+		case constants.SET_CATEGORIES:
+			return {
+				...state,
+				categories: action.categories,
+			};
+		case constants.SET_FORUMS:
+			return {
+				...state,
+				forums: action.forums,
 			};
 		default:
 			return state;
