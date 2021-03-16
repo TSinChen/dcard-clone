@@ -1,0 +1,42 @@
+.currentHotForums {
+	margin: 40px;
+	padding: 20px;
+	border: 1px solid rgb(217, 217, 217);
+
+	h2 {
+		color: rgba(0, 0, 0, 0.5);
+		font-size: 14px;
+	}
+
+	.hotForums-item a {
+		display: flex;
+		height: 88px;
+		color: rgba(0, 0, 0, 0.75);
+		border-bottom: 1px solid rgb(217, 217, 217);
+		align-items: center;
+		cursor: pointer;
+
+		.hotForum-index {
+			min-width: 18px;
+			margin-right: 20px;
+			text-align: right;
+
+			&.top3 {
+				color: rgb(234, 92, 92);
+			}
+		}
+
+		.hotForum-logo {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+		}
+
+		.hotForum-name {
+			margin: 0 20px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+}

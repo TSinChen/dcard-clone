@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import FollowButton from '../Main/Utility/FollowButton';
 
 class ForumHeader extends React.Component {
 	render() {
@@ -8,18 +9,16 @@ class ForumHeader extends React.Component {
 
 		return (
 			<div className="forumHeader">
-				<div className="left">
-					<div className="forum-logo">
-						<img
-							src={currentForum.logo ? currentForum.logo.url : ''}
-							alt=""
-						/>
-					</div>
-					<Link className="forum-name" to={`/${currentForum.alias}`}>
-						{currentForum.name}
-					</Link>
+				<div className="forum-logo">
+					<img
+						src={currentForum.logo ? currentForum.logo.url : ''}
+						alt=""
+					/>
 				</div>
-				<button className="forum-follow">追蹤</button>
+				<Link className="forum-name" to={`/${currentForum.alias}`}>
+					{currentForum.name}
+				</Link>
+				<FollowButton />
 			</div>
 		);
 	}

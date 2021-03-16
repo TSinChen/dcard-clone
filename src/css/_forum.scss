@@ -11,11 +11,6 @@
 	justify-content: space-between;
 	align-items: center;
 
-	.left {
-		display: flex;
-		align-items: center;
-	}
-
 	.forum-logo {
 		width: 40px;
 		height: 40px;
@@ -34,21 +29,5 @@
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		overflow: hidden;
-	}
-
-	.forum-follow {
-		background-color: rgb(51, 151, 207);
-		padding: 0 14px;
-		color: #fff;
-		font-size: 14px;
-		line-height: 36px;
-		border: none;
-		border-radius: 8px;
-		cursor: pointer;
-		transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-
-		&:hover {
-			opacity: 0.9;
-		}
 	}
 }

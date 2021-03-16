@@ -4,7 +4,11 @@ import Tags from './Utility/Tags';
 import Ads from './Utility/Ads';
 import Posts from './Utility/Posts';
 import ForumHeader from './ForumHeader';
-import { fetchCurrentForum, fetchForumPosts } from '../../store/actionCreators';
+import {
+	fetchCurrentForum,
+	fetchForumPosts,
+	setCurrentForum,
+} from '../../store/actionCreators';
 
 class Forum extends React.Component {
 	componentDidMount() {
@@ -17,6 +21,10 @@ class Forum extends React.Component {
 			this.props.fetchCurrentForum(this.props.match.params.forum);
 			this.props.fetchForumPosts();
 		}
+	}
+
+	componentWillUnmount() {
+		this.props.setCurrentForum('');
 	}
 
 	render() {
@@ -54,4 +62,5 @@ const mapState = (state) => {
 export default connect(mapState, {
 	fetchCurrentForum,
 	fetchForumPosts,
+	setCurrentForum,
 })(Forum);

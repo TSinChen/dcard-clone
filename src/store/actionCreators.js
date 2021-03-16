@@ -6,12 +6,8 @@ export const fetchHotForums = () => {
 		const res = await axios.get('/apis/forums.json');
 
 		const forums = res.data.filter(
-			(forum) => forum.subscriptionCount > 200000
+			(forum) => forum.subscriptionCount > 180000
 		);
-
-		if (forums.length > 8) {
-			forums.splice(8);
-		}
 
 		dispatch(setHotForums(forums));
 	};
@@ -29,7 +25,7 @@ export const fetchFeaturedForums = () => {
 		const forums = res.data.filter(
 			(forum) =>
 				forum.subscriptionCount > 140000 &&
-				forum.subscriptionCount <= 200000
+				forum.subscriptionCount <= 180000
 		);
 
 		dispatch(setFeaturedForums(forums));

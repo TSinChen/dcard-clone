@@ -8,7 +8,7 @@ import { fetchHotPosts, setCurrentForum } from '../../store/actionCreators';
 class HomePage extends React.Component {
 	componentDidMount() {
 		this.props.fetchHotPosts();
-		this.props.setCurrentForum('home');
+		this.props.setCurrentForum('');
 	}
 
 	render() {

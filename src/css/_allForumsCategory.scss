@@ -10,46 +10,47 @@
 
 	.category-item {
 		background-color: #fff;
-		padding: 16px;
+		padding: 0 16px;
 		height: 48px;
 		color: rgba(0, 0, 0, 0.75);
-		line-height: 22px;
 		cursor: pointer;
 
 		&.active {
-			position: sticky;
-			top: 48px;
 			height: auto;
 			padding-bottom: 0;
-			z-index: 2;
+
+			.category-header {
+				background-color: #fff;
+				position: sticky;
+				top: 48px;
+				z-index: 2;
+			}
 		}
 
 		.category-header {
 			display: flex;
+			padding: 16px 0;
 			justify-content: space-between;
 		}
+	}
 
+	.inactive {
 		.category-forums-list {
-			display: none;
+			height: 0;
+			overflow: hidden;
 		}
 	}
 
 	.active {
 		.category-forums-list {
-			display: block;
-			margin-top: 8px;
+			height: 520px;
 		}
 
-		.category-forums-item {
+		.category-forums-item a {
 			display: flex;
 			padding: 8px 0;
 			justify-content: space-between;
 			align-items: center;
-
-			.left {
-				display: flex;
-				align-items: center;
-			}
 
 			.forum-logo {
 				width: 28px;
@@ -65,22 +66,6 @@
 			.forum-name {
 				color: #000;
 				line-height: 22px;
-			}
-
-			.forum-follow {
-				background-color: rgb(51, 151, 207);
-				padding: 0 14px;
-				color: #fff;
-				font-size: 14px;
-				line-height: 36px;
-				border: none;
-				border-radius: 8px;
-				cursor: pointer;
-				transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-
-				&:hover {
-					opacity: 0.9;
-				}
 			}
 		}
 	}

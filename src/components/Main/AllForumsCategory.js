@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import FollowButton from '../Main/Utility/FollowButton';
 import { fetchCategories, fetchForums } from '../../store/actionCreators';
 
 class AllForumsCategory extends React.Component {
@@ -13,6 +15,11 @@ class AllForumsCategory extends React.Component {
 		};
 	}
 
+	componentDidMount() {
+		this.props.fetchCategories();
+		this.props.fetchForums();
+	}
+
 	onCategoryClick(id) {
 		this.setState({
 			openCategory: id,
@@ -20,11 +27,6 @@ class AllForumsCategory extends React.Component {
 		});
 
 		this.fetchCategoryForums(id);
-	}
-
-	componentDidMount() {
-		this.props.fetchCategories();
-		this.props.fetchForums();
 	}
 
 	fetchCategoryForums = async (id) => {
@@ -88,26 +90,31 @@ class AllForumsCategory extends React.Component {
 
 	renderCategoryForums() {
 		return (
-			<ul className="category-forums-list">
-				{this.state.categoryForums.map((categoryForum) => {
-					return (
-						<li
-							className="category-forums-item"
-							key={categoryForum.id}
-						>
-							<div className="left">
-								<div className="forum-logo">
-									<img src={categoryForum.logo.url} alt="" />
-								</div>
-								<div className="forum-name">
-									{categoryForum.name}
-								</div>
-							</div>
-							<button className="forum-follow">追蹤</button>
-						</li>
-					);
-				})}
-			</ul>
+			<div className="category-forums-list">
+				<ul>
+					{this.state.categoryForums.map((categoryForum) => {
+						return (
+							<li
+								className="category-forums-item"
+								key={categoryForum.id}
+							>
+								<Link to={`/${categoryForum.alias}`}>
+									<div className="forum-logo">
+										<img
+											src={categoryForum.logo.url}
+											alt=""
+										/>
+									</div>
+									<div className="forum-name">
+										{categoryForum.name}
+									</div>
+									<FollowButton />
+								</Link>
+							</li>
+						);
+					})}
+				</ul>
+			</div>
 		);
 	}
 
