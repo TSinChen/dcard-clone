@@ -1,0 +1,98 @@
+.side {
+	display: flex;
+	width: 300px;
+	flex-direction: column;
+
+	.forum-post {
+		background-color: #fff;
+		width: 100%;
+		margin-bottom: 10px;
+		padding: 20px;
+		color: rgba(0, 0, 0, 0.6);
+		border-radius: 2px;
+
+		.forum-header {
+			display: flex;
+			align-items: center;
+
+			.forum-logo {
+				img {
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+				}
+			}
+
+			.forum-name {
+				color: #000;
+				margin-left: 10px;
+				font-size: 20px;
+				line-height: 1.6;
+			}
+		}
+
+		.forum-postsPerDay {
+			margin-top: 4px;
+			font-size: 14px;
+			line-height: 1.57;
+		}
+
+		.forum-description {
+			display: flex;
+			color: rgba(0, 0, 0, 0.6);
+			font-size: 14px;
+			line-height: 1.43;
+			height: 22px;
+			overflow: hidden;
+			transition: height 0.3s;
+
+			p {
+				width: calc(100% - 16px);
+			}
+
+			.toggle {
+				width: 16px;
+				height: 16px;
+				margin-left: auto;
+				fill: rgba(0, 0, 0, 0.6);
+				cursor: pointer;
+				transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			}
+
+			&.close {
+				p {
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+			}
+
+			&.open {
+				height: auto;
+
+				.toggle {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		button {
+			width: 100%;
+			margin-top: 20px;
+			font-size: 16px;
+			line-height: 44px;
+		}
+	}
+
+	.ads-block {
+		background-color: #eee;
+		width: 100%;
+		height: 250px;
+		margin-bottom: 10px;
+		display: flex;
+		color: #000;
+		font-size: 30px;
+		justify-content: center;
+		align-items: center;
+	}
+}

@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import Tags from './Utility/Tags';
-import Ads from './Utility/Ads';
-import Posts from './Utility/Posts';
-import { fetchHotPosts, setCurrentForum } from '../../store/actionCreators';
+import Tags from '../Utility/Tags';
+import Ads from '../Utility/AdBanner';
+import Posts from '../Utility/Posts';
+import { fetchHotPosts, setCurrentForum } from '../../../store/actionCreators';
 
 class HomePage extends React.Component {
 	componentDidMount() {

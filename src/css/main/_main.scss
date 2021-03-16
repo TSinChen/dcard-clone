@@ -7,7 +7,6 @@
 	margin: 0 12px;
 	color: #000;
 	border-radius: 4px 4px 0 0;
-	overflow: hidden;
 	flex-direction: column;
 
 	.mainHeader {
@@ -20,10 +19,8 @@
 		border-radius: 4px 4px 0 0;
 		z-index: 10;
 	}
-	
-	.ads {
-		.banner {
-			width: 100%;
-		}
+
+	.adBanner {
+		width: 100%;
 	}
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import FollowButton from '../Main/Utility/FollowButton';
+import DcardButton from '../../Utility/DcardButton';
 
 class CurrentHotForums extends React.Component {
 	renderHotForums() {
@@ -26,7 +26,7 @@ class CurrentHotForums extends React.Component {
 								<div className="hotForum-name">
 									{forum.name}
 								</div>
-								<FollowButton />
+								<DcardButton>追蹤</DcardButton>
 							</Link>
 						</li>
 					</ul>

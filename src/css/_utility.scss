@@ -11,7 +11,7 @@ body {
 	padding-top: 68px;
 }
 
-.forum-follow {
+.dcard-button {
 	background-color: rgb(51, 151, 207);
 	margin-left: auto;
 	padding: 0 14px;
@@ -22,6 +22,7 @@ body {
 	border-radius: 8px;
 	cursor: pointer;
 	transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+	user-select: none;
 
 	&:hover {
 		opacity: 0.9;

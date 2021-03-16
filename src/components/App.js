@@ -4,10 +4,11 @@ import { HashRouter, Route } from 'react-router-dom';
 import '../css/all.css';
 import Header from './Header';
 import Navbar from './Navbar';
-import HomePage from './Main/HomePage';
-import Forum from './Main/Forum';
-import AllForumsCategory from './Main/AllForumsCategory';
-import CurrentHotForums from './Main/CurrentHotForums';
+import HomePage from './Main/Pages/HomePage';
+import Forum from './Main/Pages/Forum';
+import AllForumsCategory from './Main/Pages/AllForumsCategory';
+import CurrentHotForums from './Main/Pages/CurrentHotForums';
+import Side from './Side';
 
 class App extends React.Component {
 	render() {
@@ -19,9 +20,18 @@ class App extends React.Component {
 					<div className="main">
 						<Route path="/" exact component={HomePage} />
 						<Route path="/:forum" exact component={Forum} />
-						<Route path="/forum/all" exact component={AllForumsCategory} />
-						<Route path="/forum/popular" exact component={CurrentHotForums} />
+						<Route
+							path="/forum/all"
+							exact
+							component={AllForumsCategory}
+						/>
+						<Route
+							path="/forum/popular"
+							exact
+							component={CurrentHotForums}
+						/>
 					</div>
+					<Side />
 				</div>
 			</HashRouter>
 		);

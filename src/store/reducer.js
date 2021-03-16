@@ -8,7 +8,7 @@ const defaultState = {
 	},
 	hotPosts: [],
 	forumPosts: [],
-	currentForum: {},
+	currentForum: '',
 	categories: [],
 	forums: [],
 };

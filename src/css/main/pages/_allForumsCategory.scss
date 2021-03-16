@@ -15,7 +15,7 @@
 		color: rgba(0, 0, 0, 0.75);
 		cursor: pointer;
 
-		&.active {
+		&.open {
 			height: auto;
 			padding-bottom: 0;
 
@@ -25,6 +25,10 @@
 				top: 48px;
 				z-index: 2;
 			}
+
+			.toggle {
+				transform: rotate(180deg);
+			}
 		}
 
 		.category-header {
@@ -32,16 +36,26 @@
 			padding: 16px 0;
 			justify-content: space-between;
 		}
+
+		.toggle {
+			width: 16px;
+			height: 16px;
+			margin-left: auto;
+			fill: rgba(0, 0, 0, 0.6);
+			cursor: pointer;
+			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
 	}
 
-	.inactive {
+	.close {
 		.category-forums-list {
 			height: 0;
 			overflow: hidden;
 		}
 	}
 
-	.active {
+	.open {
 		.category-forums-list {
 			height: 520px;
 		}

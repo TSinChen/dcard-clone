@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import FollowButton from '../Main/Utility/FollowButton';
-import { fetchCategories, fetchForums } from '../../store/actionCreators';
+import DcardButton from '../../Utility/DcardButton';
+import { fetchCategories, fetchForums } from '../../../store/actionCreators';
 
 class AllForumsCategory extends React.Component {
 	constructor(props) {
@@ -61,8 +61,8 @@ class AllForumsCategory extends React.Component {
 							<li
 								className={`category-item${
 									category.id === this.state.openCategory
-										? ' active'
-										: ' inactive'
+										? ' open'
+										: ' close'
 								}`}
 								key={category.id}
 							>
@@ -75,8 +75,19 @@ class AllForumsCategory extends React.Component {
 									<div className="category-name">
 										{category.name}
 									</div>
-									<div className="arrow">
-										<i className="fas fa-caret-down"></i>
+									<div className="toggle">
+										<svg
+											viewBox="0 0 24 24"
+											focusable="false"
+											role="img"
+											aria-hidden="true"
+										>
+											<path d="M11.08 15.62l-4.69-4.69a1.31 1.31 0 01.92-2.24h9.38a1.31 1.31 0 01.92 2.24l-4.69 4.69a1.3 1.3 0 01-1.84 0z"></path>
+											<path
+												fill="none"
+												d="M0 0h24v24H0z"
+											></path>
+										</svg>
 									</div>
 								</div>
 								{this.renderCategoryForums()}
@@ -108,7 +119,7 @@ class AllForumsCategory extends React.Component {
 									<div className="forum-name">
 										{categoryForum.name}
 									</div>
-									<FollowButton />
+									<DcardButton>追蹤</DcardButton>
 								</Link>
 							</li>
 						);
