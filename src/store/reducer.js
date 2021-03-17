@@ -11,6 +11,8 @@ const defaultState = {
 	currentForum: '',
 	categories: [],
 	forums: [],
+	modalOpen: false,
+	currentPost: {},
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -50,6 +52,11 @@ export default (state = defaultState, action) => {
 			return {
 				...state,
 				forums: action.forums,
+			};
+		case constants.MODAL_OPEN:
+			return {
+				...state,
+				modalOpen: true,
 			};
 		default:
 			return state;

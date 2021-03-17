@@ -5,7 +5,9 @@
 @import './main/main';
 @import './main/utility/tags';
 @import './main/utility/posts';
-@import './main/pages/forum';
+@import './main/pages/forum/forum';
+@import './main/pages/forum/forumModal';
 @import './main/pages/allForumsCategory';
 @import './main/pages/currentHotForums';
+@import './main/pages/post';
 @import './side/side';

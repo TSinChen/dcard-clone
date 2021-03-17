@@ -5,10 +5,11 @@ import '../css/all.css';
 import Header from './Header';
 import Navbar from './Navbar';
 import HomePage from './Main/Pages/HomePage';
-import Forum from './Main/Pages/Forum';
+import Forum from './Main/Pages/Forum/Forum';
 import AllForumsCategory from './Main/Pages/AllForumsCategory';
 import CurrentHotForums from './Main/Pages/CurrentHotForums';
 import Side from './Side';
+import ForumModal from './Main/Pages/Forum/ForumModal';
 
 class App extends React.Component {
 	render() {
@@ -29,6 +30,11 @@ class App extends React.Component {
 							path="/forum/popular"
 							exact
 							component={CurrentHotForums}
+						/>
+						<Route
+							path="/:forum/p/:id"
+							exact
+							component={ForumModal}
 						/>
 					</div>
 					<Side />

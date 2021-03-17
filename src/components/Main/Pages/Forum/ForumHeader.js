@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import DcardButton from '../../Utility/DcardButton';
+import DcardButton from '../../../Utility/DcardButton';
 
 class ForumHeader extends React.Component {
 	render() {

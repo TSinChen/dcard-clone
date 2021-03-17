@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import Tags from '../Utility/Tags';
-import Ads from '../Utility/AdBanner';
-import Posts from '../Utility/Posts';
+import Tags from '../../Utility/Tags';
+import Ads from '../../Utility/AdBanner';
+import Posts from '../../Utility/Posts';
 import ForumHeader from './ForumHeader';
 import {
 	fetchCurrentForum,
 	fetchForumPosts,
 	setCurrentForum,
-} from '../../../store/actionCreators';
+} from '../../../../store/actionCreators';
 
 class Forum extends React.Component {
 	componentDidMount() {

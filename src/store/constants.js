@@ -5,3 +5,4 @@ export const SET_FORUM_POSTS = 'SET_FORUM_POSTS';
 export const SET_CURRENT_FORUM = 'SET_CURRENT_FORUM';
 export const SET_CATEGORIES = 'SET_CATEGORIES';
 export const SET_FORUMS = 'SET_FORUMS';
+export const MODAL_OPEN = 'MODAL_OPEN';

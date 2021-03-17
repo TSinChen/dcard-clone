@@ -4,7 +4,6 @@ import ForumPost from './ForumPost';
 
 class Side extends React.Component {
 	render() {
-		console.log(this.props.currentForum);
 		return (
 			<div className="side">
 				{this.props.currentForum ? <ForumPost /> : ''}

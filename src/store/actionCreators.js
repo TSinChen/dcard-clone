@@ -105,3 +105,16 @@ const setForums = (forums) => ({
 	type: constants.SET_FORUMS,
 	forums,
 });
+
+export const modalOpen = () => ({
+	type: constants.MODAL_OPEN,
+});
+
+export const fetchCurrentPost = () => {
+	return async (dispatch) => {
+		const res = await axios.get(
+			'https://cors-anywhere.herokuapp.com/https://www.dcard.tw/service/api/v2/posts/231997531'
+		);
+		console.log(res);
+	};
+};
