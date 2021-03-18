@@ -1,4 +1,4 @@
-.posts {
+.posts-preview {
 	padding: 0 60px;
 	color: rgba(0, 0, 0, 0.75);
 
@@ -40,6 +40,10 @@
 
 		&.female {
 			background-color: rgb(203, 58, 107);
+		}
+		
+		&.dcard {
+			fill: rgb(0, 106, 166);
 		}
 	}
 

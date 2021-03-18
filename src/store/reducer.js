@@ -58,6 +58,11 @@ export default (state = defaultState, action) => {
 				...state,
 				modalOpen: true,
 			};
+		case constants.SET_CURRENT_POST:
+			return {
+				...state,
+				currentPost: action.currentPost,
+			};
 		default:
 			return state;
 	}
