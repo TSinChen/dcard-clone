@@ -420,6 +420,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 .modal .modal-content {
   position: fixed;
@@ -786,4 +787,5 @@ body {
   font-size: 30px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }

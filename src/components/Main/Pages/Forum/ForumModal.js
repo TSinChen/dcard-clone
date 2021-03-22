@@ -14,7 +14,10 @@ class ForumModal extends React.Component {
 
 		return (
 			<Modal>
-				<div className="modal-background"></div>
+				<div
+					className="modal-background"
+					onClick={() => window.history.back(-1)}
+				></div>
 				<div className="modal-content">
 					<Post forum={forum} id={id} />
 				</div>

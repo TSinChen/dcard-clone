@@ -94,7 +94,10 @@ class Post extends React.Component {
 				<div className="post-header">
 					{this.renderAuthor(currentPost)}
 					<DcardButton>追蹤</DcardButton>
-					<button className="close">
+					<button
+						className="close"
+						onClick={() => window.history.back(-1)}
+					>
 						<svg
 							viewBox="0 0 24 24"
 							focusable="false"
